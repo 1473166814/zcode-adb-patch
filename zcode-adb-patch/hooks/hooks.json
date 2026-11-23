@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": true,
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/adb_patch.py\" self-update || python \"${CLAUDE_PLUGIN_ROOT}/hooks/adb_patch.py\" self-update || py -3 \"${CLAUDE_PLUGIN_ROOT}/hooks/adb_patch.py\" self-update",
+            "timeoutMs": 45000,
+            "statusMessage": "zcode-adb-patch: 检查插件更新…",
+            "onError": "allow"
+          },
+          {
+            "type": "command",
+            "shell": true,
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/adb_patch.py\" patch || python \"${CLAUDE_PLUGIN_ROOT}/hooks/adb_patch.py\" patch || py -3 \"${CLAUDE_PLUGIN_ROOT}/hooks/adb_patch.py\" patch",
+            "timeoutMs": 30000,
+            "statusMessage": "zcode-adb-patch: 确保引擎 adb 补丁在位…",
+            "onError": "allow"
+          }
+        ]
+      }
+    ]
+  }
+}

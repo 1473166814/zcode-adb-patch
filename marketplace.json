@@ -1,0 +1,19 @@
+{
+  "name": "zcode-adb-patch",
+  "plugins": [
+    {
+      "name": "zcode-adb-patch",
+      "source": "./zcode-adb-patch",
+      "version": "0.2.0",
+      "description": "Removes ZCode's refusal of adb commands in the Bash tool: when bare adb cannot be rewritten to an SDK path (workspace-controlled adb, adb not found, or the execution adapter cannot resolve), the command is passed to the shell instead of being blocked. Implemented as a reversible patch to three adb-related statements (including the Bash tool description sentence) in resources/glm/zcode.cjs; nothing else in the engine is touched. Re-applied automatically after ZCode upgrades (SessionStart hook); status and restore via /adb-patch. The plugin also self-updates through ZCode's own CLI: new releases are picked up from the marketplace after a version bump (checked once per new session, at most hourly, syntax-preflighted before install).",
+      "displayName": "ZCode ADB Patch",
+      "displayName_i18n": {
+        "zh-CN": "adb 直连补丁"
+      },
+      "description_i18n": {
+        "zh-CN": "让 ZCode 的 Bash 工具不再拒绝它解析不到的 adb 命令：工作区内的 adb、找不到或解析不了时，命令原样交给 shell 执行而不是被拦。给引擎里三处 adb 相关语句打可还原补丁，不改引擎其它内容。ZCode 升级后自动重打；/adb-patch 查看状态与还原。另带自动更新：经 ZCode 官方 CLI，新会话检查、每小时限频、安装前语法预检。"
+      },
+      "category": "developer-tools"
+    }
+  ]
+}
