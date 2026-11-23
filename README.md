@@ -41,7 +41,8 @@
 **前提**：ZCode 桌面版 + Python 3.8+（`python3` / `python` / `py -3` 任一可用）。
 
 1. 插件市场 → **添加** → **添加插件市场**：
-   - 从 GitHub 装：粘贴 `你的用户名/zcode-adb-patch`（或 `https://github.com/你的用户名/zcode-adb-patch`）
+   - 从 GitHub 装：粘贴 `1473166814/zcode-adb-patch`（走 HTTPS）
+   - HTTPS 克隆被网络重置时：粘贴 `git@github.com:1473166814/zcode-adb-patch.git`（走 SSH，需本机有可用的 GitHub SSH key）
    - 从本地装：粘贴本仓库根目录 `F:\Workspace\Projects\zcode-adb-patch`
 2. **个人** → `zcode-adb-patch` → 「adb 直连补丁」→ **安装**
 3. 开一个新会话：钩子在这一步给引擎打补丁
