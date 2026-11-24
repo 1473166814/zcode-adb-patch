@@ -41,8 +41,8 @@
 **前提**：ZCode 桌面版 + Python 3.8+（`python3` / `python` / `py -3` 任一可用）。
 
 1. 插件市场 → **添加** → **添加插件市场**：
-   - 从 GitHub 装：粘贴 `1473166814/zcode-adb-patch`（走 HTTPS）
-   - HTTPS 克隆被网络重置时：粘贴 `git@github.com:1473166814/zcode-adb-patch.git`（走 SSH，需本机有可用的 GitHub SSH key）
+   - 从 GitHub 装：粘贴 `Jiajin-zh/zcode-adb-patch`（走 HTTPS）
+   - HTTPS 克隆被网络重置时：粘贴 `git@github.com:Jiajin-zh/zcode-adb-patch.git`（走 SSH，需本机有可用的 GitHub SSH key）
    - 从本地装：粘贴本仓库根目录 `F:\Workspace\Projects\zcode-adb-patch`
 2. **个人** → `zcode-adb-patch` → 「adb 直连补丁」→ **安装**
 3. 开一个新会话：钩子在这一步给引擎打补丁
@@ -50,7 +50,7 @@
 
 安装后可以在 ZCode 的 **设置 → 插件** 里管理。更新插件：改源码并升 `plugin.json` 与 `marketplace.json` 里的版本号 → 市场页齿轮「市场源」→ 刷新该市场 → 个人 → 插件详情 → 更新（从 GitHub 装的，刷新时宿主会重新 clone 仓库）。
 
-**发给别人**：把 `1473166814/zcode-adb-patch` 发给对方，对方在 插件市场 → 添加 → 添加插件市场 里粘贴即可（公开仓库，不需要给任何 key）。对方网络到不了 GitHub 时，把 [`dist/zcode-adb-patch-v0.2.0.zip`](dist/zcode-adb-patch-v0.2.0.zip) 发过去：解压到固定目录 → 把该目录作为本地插件市场添加 → 安装。对方需要 Python 3.8+。
+**发给别人**：把 `Jiajin-zh/zcode-adb-patch` 发给对方，对方在 插件市场 → 添加 → 添加插件市场 里粘贴即可（公开仓库，不需要给任何 key）。对方网络到不了 GitHub 时，把 [`dist/zcode-adb-patch-v0.2.1.zip`](dist/zcode-adb-patch-v0.2.1.zip) 发过去：解压到固定目录 → 把该目录作为本地插件市场添加 → 安装。对方需要 Python 3.8+。
 
 ### 用法
 
